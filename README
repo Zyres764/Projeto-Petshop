@@ -1,19 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
 
-<h1>1.DESCRIÇÃO</h1>
+1.DESCRIÇÃO
 
 O projeto deve vir como uma ferramenta de ajuda para o setor dos petshops, onde possa facilitar os serviços para ambas as partes, O sistema deve seguir as funcionalidades citadas no Objetivo e no restante do projeto. O projeto será inteiramente online através de uma página web.
 
-<h1>2.OBJETIVO</h1>
+2.OBJETIVO
 
 O objetivo é criar uma ferramenta onde o cliente e as empresas veterinárias realizem seus respectivos cadastros.  
 O petshop deve informar os serviços que ele oferta, bem como horários e como entrar em contato.
@@ -21,10 +11,9 @@ O petshop poderá ser contatado através do telefone comercial, ou e-mail.
 O cliente poderá visualizar os serviços que um petshop já cadastrado na rede.
 O cliente também pode criar um cadastro com suas informações e a de seu respectivo pet(s).
 O objetivo final é prestar suporte para ambas as partes Cliente/Petshop.
-<h1>3.JUSTIFICATIVA DO PROJETO</h1>
+
+3.JUSTIFICATIVA DO PROJETO
 
 O projeto se fez necessário pois atualmente pode se tornar muito trabalhoso procurar um serviço nesta área ainda a mais quando se trata de pessoas que nunca tiveram um pet antes.
 Também deve se levar em conta a praticidade que essa ferramenta pode ofertar, buscando várias ofertas em um local só, além de ajudar o petshop a divulgar seus serviços.
 
-</body>
-</html>
