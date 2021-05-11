@@ -1,7 +1,7 @@
 <?php
 include '../Model/User.php';
 include '../Include/UserValidate.php';
-
+include '../Dao/UserDAO.php';
 
 //var_dump($_POST);
 if ((!empty($_POST['txtNome'])) &&
@@ -32,18 +32,21 @@ if ((!empty($_POST['txtNome'])) &&
         $user->senha = $_POST['txtSenha'];
         $user->nomepet = $_POST['txtNomePet'];
         $user->raca = $_POST['txtRaca'];
-        header("location:../View/User/detail.php?".
-            "user= $user->nome& "."mail= $user->email");
-        echo "Usuario $user->nome $user->sobrenome criado com sucesso";
+        $userDao = new UserDAO();
+        $userDao->create($user);
+        $_SESSION['user'] = $user->nome;
+        $_SESSION['mail'] = $user->email;
+        header("location:../View/User/detail.php");
     } else {
         $err = serialize($erros);
+        $_SESSION['erros'] = $err;
         header("location:../View/User/error.php?erros=$err");
     }
 } else {
     $erros = array();
     $erros[] = 'Informe todos os campos';
     $err = serialize($erros);
-    
+    $_SESSION['erros'] = $err;
     header("location:../View/User/error.php?erros=$err");
 }
 ?>
