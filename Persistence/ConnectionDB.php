@@ -13,7 +13,7 @@
                     self::$instance = new ConnectionDB(
                         "mysql:dbname=petshop_php;host=localhost",
                         "root",
-                        ""
+                        "Menino764"
                     );
                     echo "Conexão ao banco de dados efetuada com sucesso!";
                 } catch (Exception $e) {

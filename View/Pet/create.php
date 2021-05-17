@@ -7,13 +7,8 @@
     <title>Cadastro do Usuário</title>
 </head>
 <body>
-        <form action="../../Controller/UserController.php?operation=cadastrar" method="POST" name="form_user">
-        <h2>Sobre o Usuário:</h2>
-        <input type="text" name="txtNome" id="txtNome" placeholder="Nome"></input><br><br>
-        <input type="text" name="txtSobrenome" id="txtSobrenome" placeholder="Sobrenome"></input><br><br>
-        <input type="text" name="txtEmail" id="txtEmail" placeholder="E-mail"></input><br><br>
-        <input type="text" name="txtIdade" id="txtIdade" placeholder="Idade"></input><br><br>
-        <input type="password" name="txtSenha" id="txtSenha" placeholder="Senha"></input><br><br>
+        <form action="../../Controller/PetController.php?operation=cadastrar" method="POST" name="form_user">
+
         <h2>Sobre  o pet:</h2>
         <input type="text" name="txtNomePet" id="txtNomePet" placeholder="Nome do Pet"></input><br><br> 
         <label for="tipo">Identifique o pet:</label>

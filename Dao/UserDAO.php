@@ -31,5 +31,33 @@
                     echo $e;
                 }
         }
-    }
+
+        public function search(){
+            try{
+                $statemente = $this->connection->prepare("SELECT * FROM usuarios");
+                $statemente ->execute();
+                $dados = $statemente->fetchAll();
+                $this->connection = null;
+
+                return $dados;
+            } catch (PDOException $e) {
+                echo "Ocorreram erros ao buscar os usuários";
+                echo $e;
+
+            }
+        }
+        public function delete($id) {
+            try{
+                $statemente = $this->connection->prepare("DELETE FROM Usuarios WHERE id = ?");
+                $statemente->bindValue(1, $id);
+                $statemente->execute();
+
+                $this->connection = null;
+            }  catch (PDOException $e) {
+                echo  "Ocorreram erros ao deletar o usuário";
+                echo $e;    
+            }
+
+        }
+}
 ?>
