@@ -12,12 +12,12 @@ session_start();
 <body>
      <?php
         
-        if (isset($_SESSION['user']) && isset($_SESSION['mail'])){
+        if (isset($_SESSION['user']) && isset($_SESSION['raca'])){
             echo'<br> Usuario' .$_SESSION['user'] . 
-                '<br> E-mail' .$_SESSION['mail'];
+                '<br> Raça' .$_SESSION['raca'];
 
                 unset ($_SESSION ['user']);
-                unset ($_SESSION ['mail']);
+                unset ($_SESSION ['raca']);
         } 
 
      ?>

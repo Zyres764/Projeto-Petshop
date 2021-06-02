@@ -1,5 +1,5 @@
 <?php
-    class UserValidate {
+    class PetValidate {
         public static function testarNome($paramNome) {
             if ($paramNome < 3){
                 return false;

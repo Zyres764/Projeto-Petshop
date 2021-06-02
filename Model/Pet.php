@@ -3,9 +3,10 @@
 Class User {
 
     var $id;
+    var $user_id;
     var $nomePet;
     var $racaPet;
-    var $dono;
+
 
 
     public function __construct(){}
