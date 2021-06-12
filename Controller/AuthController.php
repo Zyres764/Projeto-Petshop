@@ -12,7 +12,7 @@ include '../Dao/UserDAO.php';
 
         if ($user) {
             $_SESSION['usuario'] = serialize($user);
-            header("location:''../View/app.php'");
+            header("location:../View/app.php");
         }
         else {
             unset($_SESSION['usuario']);

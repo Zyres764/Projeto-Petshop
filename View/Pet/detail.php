@@ -12,12 +12,14 @@ session_start();
 <body>
      <?php
         
-        if (isset($_SESSION['user']) && isset($_SESSION['raca'])){
-            echo'<br> Usuario' .$_SESSION['user'] . 
-                '<br> Raça' .$_SESSION['raca'];
+        if (isset($_SESSION['nome']) && isset($_SESSION['Estabelecimento']) && isset($_SESSION['CNPJ'])){
+            echo'<br> Usuario' .$_SESSION['nome'] . 
+                '<br> Usuario' .$_SESSION['Estabelecimento'] . 
+                '<br> Raça' .$_SESSION['CNPJ'];
 
-                unset ($_SESSION ['user']);
-                unset ($_SESSION ['raca']);
+                unset ($_SESSION ['nome']);
+                unset ($_SESSION ['Estabelecimento']);
+                unset ($_SESSION ['CNPJ']);
         } 
 
      ?>

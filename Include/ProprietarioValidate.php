@@ -1,5 +1,5 @@
 <?php
-    class PetValidate {
+    class ProprietarioValidate {
         public static function testarNome($paramNome) {
             if ($paramNome < 3){
                 return false;
@@ -9,9 +9,9 @@
             }
             }
 
-            public static function testarRaca($paramRaca) {
+            public static function testarEstabelecimento($paramEstabelecimento) {
                 
-                if ($paramRaca < 3) {
+                if ($paramEstabelecimento < 3) {
                     return false;
                 }
                 else {

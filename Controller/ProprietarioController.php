@@ -1,44 +1,44 @@
 <?php
 session_start();
-include '../Model/User.php';
-include '../Include/UserValidate.php';
-include '../Dao/UserDAO.php';
+include '../Model/Proprietario.php';
+include '../Include/ProprietarioValidate.php';
+include '../Dao/ProprietarioDAO.php';
 
 function criar() {
     
     $erros = array();
 
-    if (!UserValidate::testarIdade($_POST['txtIdade'])) $erros[] = 'Idade Invalida';
-    if (!UserValidate::testarEmail($_POST['txtEmail'])) $erros[] = 'E-mail Invalido';
+    if (!ProprietarioValidate::testarNome($_POST['txtNome'])) $erros[] = 'Nome Invalido';
+    if (!ProprietarioValidate::testarEstabelecimento($_POST['txtEstabelecimento'])) $erros[] = 'Estabelecimento Invalido';
 
     if (count($erros) == 0){
-        $user = new User();
+        $proprietario = new Proprietario();
 
-        $user->nome = $_POST['txtNome'];
-        $user->sobrenome = $_POST['txtSobrenome'];
-        $user->email = $_POST['txtEmail'];
-        $user->idade = $_POST['txtIdade'];
-        $user->senha = $_POST['txtSenha'];
+        $proprietario->nome = $_POST['txtNome'];
+        $proprietario->Estabelecimento = $_POST['txtEstabelecimento'];
+        $proprietario->CNPJ = $_POST['txtCNPJ'];
 
-        $userDao = new UserDAO();
-        $userDao->create($user);
 
-        $_SESSION['user'] = $user->nome;
-        $_SESSION['mail'] = $user->email;
-        header("location:../View/User/detail.php");
+        $ProprietariorDao = new ProprietarioDAO();
+        $ProprietarioDao->create($proprietario);
+
+        $_SESSION['nome'] = $proprietario->nome;
+        $_SESSION['Estabelecimento'] = $proprietario->Estabelecimento;
+        $_SESSION['CNPJ'] = $proprietario->CNPJ;
+        header("location:../View/Proprietario/detail.php");
     }
     else{
         $err = serialize($erros);
         $_SESSION['erros'] = $err;
-        header("location:../View/User/error.php");
+        header("location:../View/Proprietario/error.php");
     }
 }
 function listar() {
-    $userDao = new UserDAO();
-    $usuarios = $userDao->search();
+    $ProprietarioDao = new UserDAO();
+    $proprietario = $ProprietarioDao->search();
 
-    $_SESSION['users'] = serialize($usuarios);
-    header("location:../View/User/list.php");
+    $_SESSION['Proprietario'] = serialize($proprietario);
+    header("location:../View/Proprietario/list.php");
 
 }
 function atualizar() {
@@ -47,12 +47,12 @@ function atualizar() {
 function deletar() {
     $id = $_GET['id'];
     if (isset($id)) {
-        $userDao = new UserDAO();
-        $userDao->delete($id);
-        header("location:../../Controller/UserController.php?operation=consultar");
+        $ProprietariorDao = new ProprietarioDAO();
+        $ProprietarioDao->delete($id);
+        header("location:../../Controller/ProprietarioController.php?operation=consultar");
     }
     else{
-        echo 'Usuário informado não existente';
+        echo 'Proprietario informado não existente';
     }
 }
 

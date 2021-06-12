@@ -8,6 +8,7 @@
     <title>Cadastro do Usuário</title>
 </head>
 <body>
+
     <div class="form">  
         <form action="../../Controller/UserController.php?operation=cadastrar" method="POST" name="form_user">
         <h2>Sobre o Usuário:</h2>

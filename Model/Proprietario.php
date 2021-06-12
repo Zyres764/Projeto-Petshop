@@ -1,11 +1,11 @@
 <?php
 
-Class Pet {
+Class Proprietario {
 
     var $id;
-    var $user_id;
-    var $nomePet;
-    var $racaPet;
+    var $nome;
+    var $Estabelecimento;
+    var $CNPJ;
 
 
 

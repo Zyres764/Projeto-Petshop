@@ -24,15 +24,37 @@ div.intro{
     align-items: center;
 }
 .intro h1{
-    font-size: 2em;
+    font-size: 5em;
     font-family:impact;
     
 }
-
-div.Form{
+.intro p{
+    font-size: 1em;
+    font-family:fantasy;
+    
+}
+div.botao{
     display: flex;
     text-align: center;
-    margin-top: 15%;
+    margin-top: -48%;
     position: absolute;
     
+}
+.botao button {
+    font-size: 1em;
+    font-family:fantasy;
+    margin: 3px;
+    background:none;
+    border: none;
+    text-decoration: underline white;
+    
+}
+.botao button:hover {
+    font-size: 1em;
+    font-family:fantasy;
+    margin: 3px;
+    background:none;
+    border: none;
+    text-decoration: underline white;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 }

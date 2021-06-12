@@ -12,14 +12,14 @@ session_start();
 <body>
      <?php
      if (isset($_SESSION['users'])){
-         include_once '../../Model/User.php';
+         include_once '../../Model/Pet.php';
 
          $users = array();
          $users = unserialize($_SESSION['users']);
 
          foreach($users as $u) {
              $id = $u['id'];
-             $nomeCompleto = $u['nome'].' '.$u['sobrenome'];
+             $nomeCompleto = $u['nomePet'].' '.$u['racaPet'];
              echo "<tr><td><a href='../../Controller/PetController.php?operation=deletar&id=$id'>Deletar</a></td> - $nomeCompleto<br></tr>";  
          }
          unset($_SESSION['users']);

@@ -8,13 +8,13 @@ function criar() {
 
     $user = unserialize($_SESSION['usuario']);
 
-    $lugar = new    User();
-    $lugar->user_id = $user[0]['id'];
-    $lugar->local = $_POST['txtLocal'];
-    $lugar->pais = $_POST['txtPais'];
+    $Pet = new Pet();
+    $Pet->user_id = $user[0]['id'];
+    $Pet->nomePet = $_POST['txtNomePet'];
+    $Pet->racaPet = $_POST['txtRaca'];
 
-    $lugarDao = new PetDAO();
-    $lugarDao->create($lugar);
+    $PetDao = new PetDAO();
+    $PetDao->create($Pet);
 
     listar();
 
@@ -45,8 +45,8 @@ function criar() {
     */
 }
 function listar() {
-    $userDao = new PetDAO();
-    $usuarios = $userDao->search();
+    $PetDao = new PetDAO();
+    $usuarios = $PetDao->search();
 
     $_SESSION['users'] = serialize($usuarios);
     header("location:../View/Pet/list.php");
@@ -58,8 +58,8 @@ function atualizar() {
 function deletar() {
     $id = $_GET['id'];
     if (isset($id)) {
-        $userDao = new UserDAO();
-        $userDao->delete($id);
+        $PetDao = new PetDAO();
+        $PetDao->delete($id);
         header("location:../../Controller/PetController.php?operation=consultar");
     }
     else{
@@ -90,7 +90,7 @@ if (isset($operacao)) {
 
 }
 //var_dump($_POST);
-if (
+/*if (
     (!empty($_POST['txtNomePet'])) &&
     (!empty($_POST['txtRaca'])) 
 
@@ -110,21 +110,22 @@ if (
        
         $user->nomepet = $_POST['txtNomePet'];
         $user->raca = $_POST['txtRaca'];
-        $userDao = new PetDAO();
-        $userDao->create($user);
-        $_SESSION['user'] = $user->nome;
-        $_SESSION['raca'] = $user->email;
-        header("location:../View/User/detail.php");
+
+        $PetDao = new PetDAO();
+        $PetDao->create($user);
+        $_SESSION['nomepet'] = $user->nomePet;
+        $_SESSION['raca'] = $user->racaPet;
+        header("location:../View/Pet/detail.php");
     } else {
         $err = serialize($erros);
         $_SESSION['erros'] = $err;
-        header("location:../View/User/error.php?erros=$err");
+        header("location:../View/Pet/error.php?erros=$err");
     }
 } else {
     $erros = array();
     $erros[] = 'Informe todos os campos';
     $err = serialize($erros);
     $_SESSION['erros'] = $err;
-    header("location:../View/User/error.php?erros=$err");
-}
+    header("location:../View/Pet/error.php?erros=$err");
+}*/
 ?>
