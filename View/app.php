@@ -22,6 +22,7 @@ session_start();
     <div class="botao">
            <a href="User/create.php"> <button>Usuario</button></a>
            <a href="Pet/create.php"> <button>Pet</button></a>
+           <a href="Proprietario/create.php"> <button>Proprietário</button></a>
     </div>
     <?php
         if (isset($_SESSION['usuario'])) {
@@ -33,7 +34,7 @@ session_start();
     ?>
     <div class="intro">
     <br>
-     <p >Utiliza os botões abaixo para navegar!</p>
+     <p >Utiliza os botões acima para navegar!</p>
     </div>
 </body>
 </html>

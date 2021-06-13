@@ -11,11 +11,11 @@ session_start();
 </head>
 <body>
      <?php
-     if (isset($_SESSION['Proprietario'])){
+     if (isset($_SESSION['users'])){
          include_once '../../Model/Proprietario.php';
 
          $Proprietario = array();
-         $Proprietario = unserialize($_SESSION['Proprietario']);
+         $Proprietario = unserialize($_SESSION['users']);
 
          foreach($Proprietario as $u) {
              $id = $u['id'];
@@ -23,7 +23,7 @@ session_start();
              $CNPJ = $u['CNPJ']; 
              echo "<tr><td><a href='../../Controller/ProprietarioController.php?operation=deletar&id=$id'>Deletar</a></td> - $nomeCompleto<br> - $CNPJ<br></tr>";  
          }
-         unset($_SESSION['Proprietario']);
+         unset($_SESSION['users']);
      }
      ?>
 </body>

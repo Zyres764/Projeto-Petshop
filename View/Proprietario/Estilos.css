@@ -11,8 +11,8 @@ body, html{
         align-items: center;
         
     }
-    div.form {
-        width: 1200px;
+    div {
+        width: 1100px;
         height: 100%;
         background: rgb(255, 255, 255);
         color: rgb(0, 0, 0);
@@ -22,4 +22,41 @@ body, html{
         justify-content: center;
         align-items: center;
     }
+    form.form {
+        width: 600px;
+        height: 600px;
+        size: 00px;   
+    }
+  .form input{
+    width: 300px;
+    height: 30px;
+  }
+  .form h2{
+        font-size: xx-large;
+  }
+
+
+  button {background-image: linear-gradient(45deg, #85FFBD 0%, #c6ff7d 100%);}
+  button {
+     margin: 10px;
+     padding: 15px 45px;
+     text-align: center;
+     text-transform: uppercase;
+     transition: 0.5s;
+     background-size: 200% auto;
+     color: white;            
+     box-shadow: 0 0 20px #eee;
+     border-radius: 10px;
+     flex-direction: column;
+     text-align: center;
+     justify-content: center;
+     align-items: center;
+     width: 308px;
+   }
+
+   button:hover {
+     background-position: right center; /* change the direction of the change here */
+     color: #fff;
+     text-decoration: none;
+   }
   

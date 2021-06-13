@@ -19,14 +19,14 @@
 
 
     </div>
-    <div class="Form">  
-            <form action="./Controller/AuthController.php?operation=login" method="POST" name="form_user">
+    <div >  
+            <form class="form" action="./Controller/AuthController.php?operation=login" method="POST" name="form_user">
             <p>Digite o Email:</p>
         <input required type="text" name="txtEmail" id="txtEmail" placeholder="E-mail"/><br><br>
         <p>Digite a Senha:</p>
         <input required type="password" name="txtSenha" id="txtSenha" placeholder="Senha"/><br><br>
-        <input type="submit" value="Login"/>
-        <input type="reset" value="Limpar"/>
+        <button class="btn-grad" type="submit" value="cadastrar">Cadastrar</button>
+        <button type="reset" value="Limpar">Limpar</button>
         </form>
         </div>
 </body>

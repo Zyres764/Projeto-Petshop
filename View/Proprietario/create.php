@@ -9,16 +9,16 @@
 </head>
 <body>
 
-    <div class="form">  
-        <form action="../../Controller/ProprietarioController.php?operation=cadastrar" method="POST" name="form_proprietario">
+    <div>  
+        <form class="form"action="../../Controller/ProprietarioController.php?operation=cadastrar" method="POST" name="form_proprietario">
         <h2>Sobre o Proprietário:</h2>
         <input required type="text" name="txtNome" id="txtNome" placeholder="Nome"></input><br><br>
         <input required type="text" name="txtEstabelecimento" id="txtEstabelecimento" placeholder="Nome do Estabelecimento"></input><br><br>
         <input required type="text" name="txtCNPJ" id="txtCNPJ" placeholder="CNPJ"></input><br><br>
-        
-        <input type="submit" value="cadastrar"></input>
-        <input type="reset" value="Limpar"></input>
-        
+    
+        <button type="submit" value="cadastrar">Cadastrar</button>
+        <button type="reset" value="Limpar">Limpar</button>
+    
         </form>
     </div>
 </body>
