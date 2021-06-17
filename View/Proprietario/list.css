@@ -1,0 +1,20 @@
+table, td, th {
+    border: 1px solid black;
+  }
+  
+  table.tabela {
+    width: 50%;
+    border-collapse: collapse;
+    height: 35px;
+    margin-top: 0px;
+  }
+
+    body{
+        background-color: #85FFBD;
+        background-image: linear-gradient(45deg, #85FFBD 0%, #c6ff7d 100%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }

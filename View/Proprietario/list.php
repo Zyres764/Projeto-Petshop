@@ -11,6 +11,7 @@ session_start();
 </head>
 <body>
      <?php
+     
      if (isset($_SESSION['users'])){
          include_once '../../Model/Proprietario.php';
 

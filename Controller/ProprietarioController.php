@@ -7,8 +7,6 @@ include '../Dao/ProprietarioDAO.php';
 
 function criar() {
 
-    $user = unserialize($_SESSION['usuario']);
-
     $Proprietario = new Proprietario();
     $Proprietario->nome = $_POST['txtNome'];
         $Proprietario->Estabelecimento = $_POST['txtEstabelecimento'];
@@ -16,7 +14,7 @@ function criar() {
 
         $ProprietarioDAO = new ProprietarioDAO();
         $ProprietarioDAO->create($Proprietario);
-
+        var_dump($Proprietario); die();
     listar();
 
 }

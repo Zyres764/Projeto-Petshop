@@ -45,13 +45,13 @@ div {
     align-items: center;
 }
 form.form {
-    width: 600px;
-    height: 600px;
-    size: 00px;   
+    width: 400px;
+    height: 400px;
+    size: 00px;      
 }
 .form input{
-width: 300px;
-height: 30px;
+    width: 200px;
+    height: 25px;
 }
 .form h2{
     font-size: xx-large;
@@ -61,19 +61,19 @@ height: 30px;
 button {background-image: linear-gradient(45deg, #85FFBD 0%, #c6ff7d 100%);}
 button {
  margin: 10px;
- padding: 15px 45px;
+ padding: 8px 60px;
  text-align: center;
  text-transform: uppercase;
  transition: 0.5s;
  background-size: 200% auto;
- color: white;            
+ color: rgb(0, 0, 0);            
  box-shadow: 0 0 20px #eee;
  border-radius: 10px;
  flex-direction: column;
  text-align: center;
  justify-content: center;
  align-items: center;
- width: 308px;
+ width: 200px;
 }
 
 button:hover {

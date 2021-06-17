@@ -4,11 +4,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <link rel="stylesheet" href="../Proprietario/Estilos.css">
     <meta charset="UTF-8">
     <title>Cadastro do Pet</title>
 </head>
 <body>
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>
 <div>   
 <?php
             $user= unserialize($_SESSION['usuario']);
@@ -23,8 +29,7 @@
         <input type="text" name="txtRaca" id="txtRaca" placeholder="Raça do Pet"></input><br><br>
       
         <button type="submit" value="cadastrar">Cadastrar</button>
-        <button type="reset" value="Limpar">Limpar</button>
-       
+        <button type="button" onclick="location.href='http://localhost:9992/View/app.php';" value="Go to Google" >Voltar</button>
         
         </form>
         </div>

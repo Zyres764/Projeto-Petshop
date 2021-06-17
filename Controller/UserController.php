@@ -8,7 +8,7 @@ function criar() {
     
     $erros = array();
 
-    if (!UserValidate::testarIdade($_POST['txtIdade'])) $erros[] = 'Idade Invalida';
+    /*if (!UserValidate::testarIdade($_POST['txtIdade'])) $erros[] = 'Idade Invalida';
     if (!UserValidate::testarEmail($_POST['txtEmail'])) $erros[] = 'E-mail Invalido';
 
     if (count($erros) == 0){
@@ -25,14 +25,21 @@ function criar() {
 
         $_SESSION['user'] = $user->nome;
         $_SESSION['mail'] = $user->email;
-        header("location:../View/User/detail.php");
+        header("location:../View/User/list.php");
+*/
+        $user = new User();
+        $user->nome = $_POST['txtNome'];
+        $user->sobrenome = $_POST['txtSobrenome'];
+        $user->email = $_POST['txtEmail'];
+        $user->idade = $_POST['txtIdade'];
+        $user->senha = $_POST['txtSenha'];
+
+        $UserDAO = new UserDAO();
+        $UserDAO->create($user);
+    listar();
+
+
     }
-    else{
-        $err = serialize($erros);
-        $_SESSION['erros'] = $err;
-        header("location:../View/User/error.php");
-    }
-}
 function listar() {
     $userDao = new UserDAO();
     $usuarios = $userDao->search();

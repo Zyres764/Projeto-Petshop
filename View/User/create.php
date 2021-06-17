@@ -1,3 +1,6 @@
+<?php 
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,6 +14,10 @@
 <body>
 
     <div >  
+ <?php   $user= unserialize($_SESSION['usuario']);
+            if(!$user)
+                header("location:../../index.php")
+        ?>
         <form class="form" action="../../Controller/UserController.php?operation=cadastrar" method="POST" name="form_user">
         <h2>Sobre o Usuário:</h2>
         <input required type="text" name="txtNome" id="txtNome" placeholder="Nome"></input><br><br>
@@ -20,7 +27,7 @@
         <input required type="password" name="txtSenha" id="txtSenha" placeholder="Senha"></input><br><br>
         
         <button class="btn-grad" type="submit" value="cadastrar">Cadastrar</button>
-        <button type="reset" value="Limpar">Limpar</button>
+        <button type="button" onclick="location.href='http://localhost:9992/View/app.php';" value="Go to Google" >Voltar</button>
         
         </form>
     </div>
