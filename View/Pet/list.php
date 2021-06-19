@@ -14,6 +14,7 @@ session_start();
 </head>
 
 <body>
+<button type="button" onclick="location.href='http://localhost:9992/View/app.php';" value="Go to Google" >Voltar</button>
     <div>   
     <table class="tabela">
         <tr>
@@ -36,18 +37,21 @@ session_start();
                     $raca = $u['racaPet'];
                     echo "
                     <tr>
-                                <td>
+                                <td class='delete'>
                                 <a href='../../Controller/PetController.php?operation=deletar&id=$id'><i class='fas fa-trash'></i>
                                 </a>
                                 </td>
                                 <td>
-                                $nomeCompleto </td><br> 
+                                $nomeCompleto </td>
                                 <td>
-                                $raca </td><br>
+                                $raca </td>
                                 </tr>
                             ";
                 }
                 unset($_SESSION['users']);
+            } else {
+                
+                header('Location:../../Controller/PetController.php?operation=consultar');
             }
             ?>
             </table>

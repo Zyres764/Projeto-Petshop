@@ -14,7 +14,7 @@ function criar() {
 
         $ProprietarioDAO = new ProprietarioDAO();
         $ProprietarioDAO->create($Proprietario);
-        var_dump($Proprietario); die();
+        //var_dump($Proprietario); die();
     listar();
 
 }

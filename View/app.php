@@ -20,13 +20,13 @@ session_start();
 
     </div>
     <div class="botao">
-           <a href="User/create.php"> <button>Usuario</button></a>
-           <a href="Pet/create.php"> <button>Pet</button></a>
-           <a href="Proprietario/create.php"> <button>Proprietário</button></a>
+           <a href="User/create.php"> <button>USUÁRIO</button></a>
+           <a href="Pet/create.php"> <button>PET</button></a>
+           <a href="Proprietario/create.php"> <button>PROPRIETÁRIO</button></a>
     </div>
     <?php
         if (isset($_SESSION['usuario'])) {
-            echo "<h1>Usuario Online</h1><p>";
+            echo "<h1>Usuário Online</h1><p>";
             echo '<br><a href="../Controller/AuthController.php?operation=logout">LOGOUT</a><br>';
         }
         else

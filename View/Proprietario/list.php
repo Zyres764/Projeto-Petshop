@@ -4,12 +4,23 @@ session_start();
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+<link rel="stylesheet" href="list.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consulta de Proprietario</title>
 </head>
 <body>
+<button type="button" onclick="location.href='http://localhost:9992/View/app.php';" value="Go to Google" >Voltar</button>
+    <div>   
+    <table class="tabela">
+        <tr>
+            <th>Delete</th>
+            <th>Nome </th>
+            <th>Estabelecimento </th>
+            <th>CNPJ </th>
+        </tr>
      <?php
      
      if (isset($_SESSION['users'])){
@@ -20,11 +31,28 @@ session_start();
 
          foreach($Proprietario as $u) {
              $id = $u['id'];
-             $nomeCompleto = $u['nome'].' '.$u['Empresa'];
+             $nomeCompleto = $u['nome'];
+             $empresa = $u['Estabelecimento'];
              $CNPJ = $u['CNPJ']; 
-             echo "<tr><td><a href='../../Controller/ProprietarioController.php?operation=deletar&id=$id'>Deletar</a></td> - $nomeCompleto<br> - $CNPJ<br></tr>";  
+             echo "
+             <tr>
+                         <td class='delete'>
+                         <a href='../../Controller/ProprietarioController.php?operation=deletar&id=$id'><i class='fas fa-trash'></i>
+                         </a>
+                         </td>
+                         <td>
+                         $nomeCompleto </td>
+                         <td>
+                         $empresa </td>
+                         <td>
+                         $CNPJ</td>
+                         </tr>
+                     ";
          }
          unset($_SESSION['users']);
+     } else {
+         
+         header('Location:../../Controller/ProprietarioController.php?operation=consultar');
      }
      ?>
 </body>
