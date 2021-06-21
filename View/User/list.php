@@ -5,7 +5,7 @@ session_start();
 <html lang="en">
 <head>
 <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
-<link rel="stylesheet" href="list.css">
+<link rel="stylesheet" href="../Proprietario//list.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,6 +17,7 @@ session_start();
     <table class="tabela">
         <tr>
             <th>Delete</th>
+            <th>Id</th>
             <th>Nome Completo</th>
             <th>E-mail</th>
             <th>Idade </th>
@@ -39,6 +40,8 @@ session_start();
                          <a href='../../Controller/UserController.php?operation=deletar&id=$id'><i class='fas fa-trash'></i>
                          </a>
                          </td>
+                         <td>
+                         $id </td>
                          <td>
                          $nomeCompleto </td>
                          <td>

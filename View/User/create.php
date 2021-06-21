@@ -23,7 +23,7 @@ session_start();
         <input required type="text" name="txtNome" id="txtNome" placeholder="Nome"></input><br><br>
         <input required type="text" name="txtSobrenome" id="txtSobrenome" placeholder="Sobrenome"></input><br><br>
         <input required type="text" name="txtEmail" id="txtEmail" placeholder="E-mail"></input><br><br>
-        <input required type="text" name="txtIdade" id="txtIdade" placeholder="Idade"></input><br><br>
+        <input required type="number" name="txtIdade" id="txtIdade" placeholder="Idade"></input><br><br>
         <input required type="password" name="txtSenha" id="txtSenha" placeholder="Senha"></input><br><br>
         
         <button class="btn-grad" type="submit" value="cadastrar">Cadastrar</button>

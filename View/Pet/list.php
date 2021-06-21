@@ -19,6 +19,7 @@ session_start();
     <table class="tabela">
         <tr>
             <th>Delete</th>
+            <th>Dono id </th>
             <th>Nome </th>
             <th>Raça </th>
         </tr>
@@ -33,6 +34,7 @@ session_start();
 
                 foreach ($users as $u) {
                     $id = $u['id'];
+                    $dono = $u['user_id'];
                     $nomeCompleto = $u['nomePet'];
                     $raca = $u['racaPet'];
                     echo "
@@ -41,6 +43,8 @@ session_start();
                                 <a href='../../Controller/PetController.php?operation=deletar&id=$id'><i class='fas fa-trash'></i>
                                 </a>
                                 </td>
+                                <td>
+                                $dono </td>
                                 <td>
                                 $nomeCompleto </td>
                                 <td>
