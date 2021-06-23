@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="Estilos.css">
+    <link rel="stylesheet" href="../View/CSS/Estilos.css">
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -30,8 +30,8 @@
         <input required type="text" name="txtEmail" id="txtEmail" placeholder="E-mail"/><br><br>
         <p>Digite a Senha:</p>
         <input required type="password" name="txtSenha" id="txtSenha" placeholder="Senha"/><br><br>
-        <button class="btn-grad" type="submit" value="cadastrar">Cadastrar</button>
-        <button type="reset" value="Limpar">Limpar</button>
+        <button class="btn-grad" type="submit" value="cadastrar">Logar</button>
+
         </form>
         </div>
 </body>

@@ -6,7 +6,7 @@ session_start();
 
 <head>
 <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
-    <link rel="stylesheet" href="../Proprietario//list.css">
+    <link rel="stylesheet" href="../CSS/list.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,8 +14,12 @@ session_start();
 </head>
 
 <body>
-<button type="button" onclick="location.href='http://localhost:9992/View/app.php';" value="Go to Google" >Voltar</button>
-    <div>   
+<div class="voltar">
+<button type="button" onclick="location.href='http://localhost:9992/View/app.php';" value="Go to Google" ><a><i class="fas fa-arrow-left"></i> Voltar</button>
+</div> <div> 
+    
+        <h1>Listagem dos Pets</h1>
+
     <table class="tabela">
         <tr>
             <th>Delete</th>
@@ -34,7 +38,7 @@ session_start();
 
                 foreach ($users as $u) {
                     $id = $u['id'];
-                    $dono = $u['user_id'];
+                    $dono = $u['dono'];
                     $nomeCompleto = $u['nomePet'];
                     $raca = $u['racaPet'];
                     echo "
@@ -44,7 +48,7 @@ session_start();
                                 </a>
                                 </td>
                                 <td>
-                                $dono </td>
+                                 $dono </td>
                                 <td>
                                 $nomeCompleto </td>
                                 <td>

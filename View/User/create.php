@@ -4,7 +4,7 @@ session_start();
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="stylesheet" href="Estilos.css">
+<link rel="stylesheet" href="../CSS/view.css">
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../Proprietario/Estilos.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">

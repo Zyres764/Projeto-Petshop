@@ -5,7 +5,7 @@
 <html lang="en">
 <head>
 
-<link rel="stylesheet" href="../Proprietario/Estilos.css">
+<link rel="stylesheet" href="../CSS/view.css">
     <meta charset="UTF-8">
     <title>Cadastro do Pet</title>
 </head>

@@ -4,7 +4,7 @@ session_start();
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="Estilos.css">
+    <link rel="stylesheet" href="../View/CSS/app.css">
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,6 +23,7 @@ session_start();
            <a href="User/create.php"> <button>USUÁRIO</button></a>
            <a href="Pet/create.php"> <button>PET</button></a>
            <a href="Proprietario/create.php"> <button>PROPRIETÁRIO</button></a>
+           <a href="listagem.php"> <button>LISTAGEM</button></a>
     </div>
     <?php
         if (isset($_SESSION['usuario'])) {

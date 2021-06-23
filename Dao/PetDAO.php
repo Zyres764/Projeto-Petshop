@@ -11,7 +11,7 @@
         public function create($user) {
                 try {
                     $statemente = $this->connection->prepare(
-                        "INSERT INTO pet (user_id, nomePet, racaPet) VALUES (?,?,?)"
+                        "INSERT INTO pet (dono, nomePet, racaPet) VALUES (?,?,?)"
                     );
 
                     $statemente->bindValue(1, $user->user_id);

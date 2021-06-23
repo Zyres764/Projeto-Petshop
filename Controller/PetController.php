@@ -12,12 +12,12 @@ function criar() {
     $Pet->user_id = $user[0]['id'];
     $Pet->nomePet = $_POST['txtNomePet'];
     $Pet->racaPet = $_POST['txtRaca'];
-
+    
     $PetDao = new PetDAO();
     $PetDao->create($Pet);
-
+ // var_dump($Pet); die();
     listar();
-
+    
  /*   
     $erros = array();
 
@@ -47,7 +47,7 @@ function criar() {
 function listar() {
     $PetDao = new PetDAO();
     $usuarios = $PetDao->search();
-
+    
     $_SESSION['users'] = serialize($usuarios);
     header("location:../View/Pet/list.php");
 
