@@ -11,12 +11,13 @@
         public function create($user) {
                 try {
                     $statemente = $this->connection->prepare(
-                        "INSERT INTO pet (dono, nomePet, racaPet) VALUES (?,?,?)"
+                        "INSERT INTO pet (dono, nomePet, racaPet, Especie) VALUES (?,?,?,?)"
                     );
 
                     $statemente->bindValue(1, $user->user_id);
                     $statemente->bindValue(2, $user->nomePet);
                     $statemente->bindValue(3, $user->racaPet);
+                    $statemente->bindValue(4, $user->Especie);
 
                     $statemente->execute();
 

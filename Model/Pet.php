@@ -6,7 +6,7 @@ Class Pet {
     var $user_id;
     var $nomePet;
     var $racaPet;
-
+    var $Especie;
 
 
     public function __construct(){}

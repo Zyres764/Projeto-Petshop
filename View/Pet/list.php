@@ -26,6 +26,7 @@ session_start();
             <th>Dono id </th>
             <th>Nome </th>
             <th>Raça </th>
+            <th>Espécie </th>
         </tr>
 
             <?php
@@ -41,6 +42,7 @@ session_start();
                     $dono = $u['dono'];
                     $nomeCompleto = $u['nomePet'];
                     $raca = $u['racaPet'];
+                    $Especie = $u['Especie'];
                     echo "
                     <tr>
                                 <td class='delete'>
@@ -53,6 +55,8 @@ session_start();
                                 $nomeCompleto </td>
                                 <td>
                                 $raca </td>
+                                <td>
+                                $Especie </td>
                                 </tr>
                             ";
                 }

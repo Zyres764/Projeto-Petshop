@@ -12,7 +12,7 @@ function criar() {
     $Pet->user_id = $user[0]['id'];
     $Pet->nomePet = $_POST['txtNomePet'];
     $Pet->racaPet = $_POST['txtRaca'];
-    
+    $Pet->Especie = $_POST['txtEspecie'];
     $PetDao = new PetDAO();
     $PetDao->create($Pet);
  // var_dump($Pet); die();
@@ -89,43 +89,4 @@ if (isset($operacao)) {
     }
 
 }
-//var_dump($_POST);
-/*if (
-    (!empty($_POST['txtNomePet'])) &&
-    (!empty($_POST['txtRaca'])) 
-
-) {
-    $erros = array();
-
-    if (!PetValidate::testarNome($_POST['txtNomePet'])) {
-        $erros[] = 'Nome inválido';
-    }
-    if (!PetValidate::testarRaca($_POST['txtRaca'])) {
-        $erros[] = 'Raça inválida';
-    }
-
-    if (count($erros) == 0) {
-        $user = new User();
-
-       
-        $user->nomepet = $_POST['txtNomePet'];
-        $user->raca = $_POST['txtRaca'];
-
-        $PetDao = new PetDAO();
-        $PetDao->create($user);
-        $_SESSION['nomepet'] = $user->nomePet;
-        $_SESSION['raca'] = $user->racaPet;
-        header("location:../View/Pet/detail.php");
-    } else {
-        $err = serialize($erros);
-        $_SESSION['erros'] = $err;
-        header("location:../View/Pet/error.php?erros=$err");
-    }
-} else {
-    $erros = array();
-    $erros[] = 'Informe todos os campos';
-    $err = serialize($erros);
-    $_SESSION['erros'] = $err;
-    header("location:../View/Pet/error.php?erros=$err");
-}*/
 ?>

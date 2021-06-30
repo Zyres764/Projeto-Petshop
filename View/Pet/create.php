@@ -27,7 +27,7 @@ function goBack() {
         <h2>Sobre  o pet:</h2>
         <input type="text" name="txtNomePet" id="txtNomePet" placeholder="Nome do Pet"></input><br><br> 
         <input type="text" name="txtRaca" id="txtRaca" placeholder="Raça do Pet"></input><br><br>
-      
+        <input type="text" name="txtEspecie" id="txtEspecie" placeholder="Espécie do Pet"></input><br><br>
         <button type="submit" value="cadastrar">Cadastrar</button>
         <button type="button" onclick="location.href='http://localhost:9992/View/app.php';" value="Go to Google" >Voltar</button>
         
